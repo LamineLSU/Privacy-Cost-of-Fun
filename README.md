@@ -1,1 +1,1 @@
-# CCS_2025_Privacy_Cost_of_Fun-
+# CCS_2025_Privacy_Cost_of_Fun

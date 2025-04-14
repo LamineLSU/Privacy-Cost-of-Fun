@@ -28,10 +28,11 @@ Interface: API + ChatGPT Pro interface
 # 2.3 Prompt Design Strategy
 Prompts were iteratively refined to extract actionable insights from gameplay logs, privacy policy documents, and observed network behavior.
 
-Example Initial Prompt:
+# Example Initial Prompt:
 
 "Identify any user data collected by TikTok mini-games."
-Refined Prompt:
+
+# Refined Prompt:
 
 "Based on the network traffic logs and privacy policy text, clearly identify which types of user data were mentioned, vague, omitted, or inconsistent in the context of TikTok mini-game interactions."
 Other Used Prompts:

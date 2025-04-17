@@ -83,4 +83,48 @@ frida-ps -U
 frida -U -f com.zhiliaoapp.musically -l /data/local/tmp/fridascript.js --no-pause
 ```
 
+## GPT Prompt Engineering for Privacy Analysis in Mini-Games
+#### Designing, Refining, and Validating Prompts for ChatGPT-4o in Gameplay Privacy Investigations
+
+```ChatGPT-4o was integrated to semantically analyze: Gameplay interactions, Network trace logs (via Burp Suite), JavaScript/JSON behavior (via JS Miner)```
+#### How We Designed Our Prompts
+```
+Identify Target Insight
+- Each prompt was anchored to a specific analytical goal, such as:
+    - Comparing policy promises vs real data collection
+    - Summarizing privacy implications if user consent was missing
+    - Isolating sensitive endpoints
+```
+#### Start with Open-Ended Drafts
+```
+We began with broad questions like: What are the discrepancies found in the network trace vs privacy policy document?
+Identify the data collection practice related to mini-games in TikTok's Privacy Policy.
+N:B These early drafts often resulted in vague or overly general responses.
+```
+#### Iterative Refinement
+```
+Prompts were reworded with explicit structure and classification expectations.
+- Intial prompt : Identify the user data collected during gameplay.
+- Refined Prompt: Clearly identify which user data types were:
+- Clearly disclosed
+- Ambiguous
+- Omitted
+- Incorrectly stated
+Base your answer on the comparison between gameplay behavior and TikTok’s Privacy Policy.
+N:B Improvement: This added structure improved consistency and reduced illusions
+```
+#### Connect with JS miner 
+```
+We paired GPT with Burp Suite’s JS Miner extension to extract:
+- Inline JavaScript behaviors
+- JSON data usage
+After JS Miner surfaced possible data points, ChatGPT was prompted:
+- What data is collected during gameplay that isn’t mentioned in the privacy policy?
+- Are there any sensitive APIs in the network traffic during gameplay compared to non-gameplay?
+- What privacy risks could arise if certain information isn’t disclosed?
+```
+#### Validation Process
+```
+Manual review : Cross-checking with actual policy text ( Only responses matching real network data and policy statements were accepted)
+```
 

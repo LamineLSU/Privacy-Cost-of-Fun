@@ -33,3 +33,54 @@ This guide outlines the step-by-step process for setting up Burp Suite with an A
 - ` -- Burp Suite will now capture: HTTP/HTTPS requests and responses, WebSocket messages, Redirects and external resource loads, API calls`
 
 
+## Frida SSL Pinning Bypass Setup for Android Apps (In our case TikTok)
+### Requirements
+- `-- Rooted Android device(Genymotion emulator)`
+- `-- Frida & Python installed on host machine`
+- `-- Platform-tools (ADB)`
+- `-- Burp Suite (Pro)`
+- ` -- Target Android APK or app installed on the emulator`
+- ` -- CA Certificate from Burp`
+
+### Step-by-Step Setup
+####  Install & Configure Emulator
+####  Install Python Tools (Install Python and required Frida packages)
+```
+$ pip install frida frida-tools objection
+```
+#### Install Platform Tools
+#### Download SSL Pinning Bypass Script (Save this Frida Script as fridascript.js)
+####  Connect Device via ADB
+```
+adb connect <device_ip>:5555
+adb devices
+
+```
+#### Setup Frida Server
+```
+Find device architecture : adb shell getprop ro.product.cpu.abi
+```
+#### Push and run server
+```
+adb push frida-server /data/local/tmp
+adb shell chmod 777 /data/local/tmp/frida-server
+adb shell /data/local/tmp/frida-server &
+```
+#### Push burp certificate to device
+```
+adb push cacert.der /data/local/tmp/cert-der.crt
+```
+#### Inject Frida Script
+```
+adb push fridascript.js /data/local/tmp
+```
+#### Find target app’s package name
+```
+frida-ps -U
+```
+#### Launch app with Frida script injection
+```
+frida -U -f com.zhiliaoapp.musically -l /data/local/tmp/fridascript.js --no-pause
+```
+
+

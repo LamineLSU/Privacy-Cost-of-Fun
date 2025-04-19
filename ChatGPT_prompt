@@ -18,7 +18,7 @@ Examples of Refined Prompts:
 "Review the following endpoints and determine what privacy-relevant data is transmitted and whether it involves device sensors, facial tracking, or location data."
 
 4. Privacy Risk Summarization:
-"Given the gameplay interaction pattern (e.g., face tracking, gesture input), what privacy risks arise when users are not explicitly informed? Summarize in 3 bullet points."
+"Given the gameplay interaction pattern (e.g., face tracking, gesture input), what privacy risks arise when users are not explicitly informed?"
 
 Manual Validation:
 - Responses were compared against actual Burp Suite packet captures.

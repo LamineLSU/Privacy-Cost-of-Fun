@@ -1,4 +1,4 @@
- Burp Suite Configuration for Intercepting TikTok Mini-Game Traffic
+Burp Suite Configuration for Intercepting TikTok Mini-Game Traffic
 
 Tool: Burp Suite Community Edition v2023.7.1
 Platform: macOS with Android Emulator (Genymotion ARM build)
@@ -26,7 +26,7 @@ Platform: macOS with Android Emulator (Genymotion ARM build)
    - Dynamically loaded JavaScript was reviewed for APIs like:
      - `x.ScanCode`, `getPhotoAlbumAuth`, `x.showLoading`
    - Sensitive traffic such as camera usage and gesture handling was recorded.
-   - Noted presence/absence of third-party calls (e.g., enable_third_party = false).
+   - Noted presence/absence of third-party calls.
 
 5. JS Miner:
    - Installed from PortSwigger BApp Store.

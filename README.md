@@ -5,7 +5,7 @@
 This guide outlines the step-by-step process for setting up Burp Suite with an Android emulator (Genymotion) to capture and analyze network traffic from mobile applications—specifically in the context of studying WebView-based games and privacy behaviors.
 ```
 ### Requirements
-- `-- Burp Suite Professional (Professiona Edition)`
+- `-- Burp Suite Professional (Professional Edition)`
 - `-- JS Miner plugin for Burp Suite`
 - `-- Genymotion Android Emulator`
 - `-- Internet-connected desktop PC and Genymotion emulator, on the same Wi-Fi network`

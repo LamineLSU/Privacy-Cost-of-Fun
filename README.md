@@ -1,4 +1,4 @@
-# TikTok_Privacy_Cost_of_Fun_2025
+# TikTok-Privacy-Cost-of-Fun
 
 ## Android App Traffic Analysis with Burp Suite
 ```
